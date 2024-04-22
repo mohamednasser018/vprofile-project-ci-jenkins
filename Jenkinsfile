@@ -62,5 +62,12 @@ pipeline {
                 }
             }
         }
+        stage('add QG') {
+            steps{
+                timeout(time: 10, unit: 'MINUTES') {
+                waitForQualityGate abortPipeline: true
+                 }
+            }
+        }
     }
 }
