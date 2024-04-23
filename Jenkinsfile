@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven "maven3"
-        jdk "orcale_jdk_8"
+        jdk "my-jdk8"
     }
     environment {
         SNAP_REPO = 'vprofile-snapshot' 
@@ -11,7 +11,7 @@ pipeline {
         NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin123'
-        NEXUSIP = '172.31.1.132'
+        NEXUSIP = '172.31.1.222'
         NEXUSPORT = '8081'
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
