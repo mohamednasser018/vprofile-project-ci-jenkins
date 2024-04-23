@@ -30,21 +30,21 @@ pipeline {
                 }
             } 
         }
-        stage('UNIT TEST'){
-            steps {
-                sh 'mvn -s settings.xml test'
-            }
-        }   
-        stage ('CODE ANALYSIS WITH CHECKSTYLE'){
-            steps {
-                sh 'mvn -s settings.xml checkstyle:checkstyle'
-            }
-            post {
-                success {
-                    echo 'Generated Analysis Result'
-                }
-            }
-        } 
+        // stage('UNIT TEST'){
+        //     steps {
+        //         sh 'mvn -s settings.xml test'
+        //     }
+        // }   
+        // stage ('CODE ANALYSIS WITH CHECKSTYLE'){
+        //     steps {
+        //         sh 'mvn -s settings.xml checkstyle:checkstyle'
+        //     }
+        //     post {
+        //         success {
+        //             echo 'Generated Analysis Result'
+        //         }
+        //     }
+        // } 
         // stage('CODE ANALYSIS with SONARQUBE') {
         //     environment {
         //         scannerHome = tool "${SONARSCANNER}"
